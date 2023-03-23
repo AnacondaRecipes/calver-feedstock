@@ -22,15 +22,18 @@ requirements:
     - wheel
   run:
     - python
-    - setuptools
 
 test:
+  requires:
+    - pip
   imports:
     - calver
+  commands:
+    - pip check
 
 about:
   home: https://github.com/di/calver
-  license: Apache Software
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Setuptools extension for CalVer package versions
