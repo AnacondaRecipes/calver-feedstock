@@ -32,11 +32,14 @@ about:
   home: https://github.com/di/calver
   license: Apache Software
   license_family: APACHE
-  license_file: 
+  license_file: LICENSE
   summary: "Setuptools extension for CalVer package versions"
-  doc_url: 
-  dev_url: 
+  doc_url: https://pypi.org/project/calver/
+  dev_url: https://github.com/di/calver
 
 extra:
   recipe-maintainers:
-    - your-github-id-here
+    - di
+    - mgorny
+    - hugovk
+    - pradyunsg
