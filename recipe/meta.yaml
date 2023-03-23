@@ -33,7 +33,10 @@ about:
   license: Apache Software
   license_family: APACHE
   license_file: LICENSE
-  summary: "Setuptools extension for CalVer package versions"
+  summary: Setuptools extension for CalVer package versions
+  description: |
+    The calver package is a setuptools extension for automatically 
+    defining your Python package version as a calendar version.
   doc_url: https://pypi.org/project/calver/
   dev_url: https://github.com/di/calver
 
