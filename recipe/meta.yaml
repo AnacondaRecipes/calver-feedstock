@@ -1,16 +1,16 @@
 {% set name = "calver" %}
-{% set version = "2022.6.26" %}
+{% set version = "2025.4.17" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e05493a3b17517ef1748fbe610da11f10485faa7c416b9d33fd4a52d74894f8b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 460702737d620f5c3d4175450485180a1b7f7a422c5db0e6af3e655c7395ec7e
 
 build:
-  skip: true  # [py<37]
+  skip: true  # [py<39]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
@@ -18,8 +18,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
-    - wheel
+    - setuptools >=77.0.1
   run:
     - python
 
@@ -38,7 +37,7 @@ about:
   license_file: LICENSE
   summary: Setuptools extension for CalVer package versions
   description: |
-    The calver package is a setuptools extension for automatically 
+    The calver package is a setuptools extension for automatically
     defining your Python package version as a calendar version.
   doc_url: https://pypi.org/project/calver/
   dev_url: https://github.com/di/calver
